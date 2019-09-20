@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mamta/Desktop/deswal/projects/GanpatiEnterprises/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "C:\\PravinKumarProject\\ganpatiEntreprises\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/mamta/.gradle/caches/transforms-2/files-2.1/28c9194402c6ffc6290a3ef9fc6dee6c/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\pravin\\.gradle\\caches\\transforms-2\\files-2.1\\ffa7b924929ea66ad3f98dedc2ed7e53\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pravin\\.gradle\\caches\\transforms-2\\files-2.1\\083c5ea4c2a21a0f412ce44098baf073\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/mamta/.gradle/caches/transforms-2/files-2.1/cf54fcec93d42bec40a50141e3e8e29c/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

@@ -1,4 +1,4 @@
-#Thu Sep 19 14:29:08 IST 2019
-base.0=/Users/mamta/Desktop/deswal/projects/GanpatiEnterprises/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Thu Sep 19 19:58:45 IST 2019
+base.0=C\:\\PravinKumarProject\\ganpatiEntreprises\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

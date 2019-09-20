@@ -6,109 +6,76 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
+import React, { Component } from "react";
+
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
-  StatusBar,
-} from 'react-native';
+  View,
+  WebView
+} from "react-native";
+// import WebView from "react-native-webview";
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+var HEADER = "#3b5998";
+var BGWASH = "rgba(255,255,255,0.8)";
+var DEFAULT_URL = "http://ganpatienterprises.co";
 
-const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
-};
+export default class WebViewExample extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      url: DEFAULT_URL,
+      status: "No Page Loaded",
+      loading: true,
+      scalesPageToFit: true
+    };
+  }
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  onNavigationStateChange = navState => {
+    this.setState({
+      backButtonEnabled: navState.canGoBack,
+      forwardButtonEnabled: navState.canGoForward,
+      url: navState.url,
+      status: navState.title,
+      loading: navState.loading,
+      scalesPageToFit: true
+    });
+  };
+
+  render() {
+    return (
+      <View style={[styles.container]}>        
+        <View style={styles.statusBar}>
+          <Text style={styles.statusBarText}>{this.state.status}</Text>
+        </View>
+        <WebView
+          ref={e => (this.webView = e)}
+          automaticallyAdjustContentInsets={false}
+          style={styles.webView}
+          source={{ uri: DEFAULT_URL}}
+          javaScriptEnabledAndroid={true}
+          onNavigationStateChange={this.onNavigationStateChange}
+          onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
+          startInLoadingState={true}
+          scalesPageToFit={this.state.scalesPageToFit}
+        />
+      </View>
+    );
+  }
+  
+}
+
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: HEADER
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  webView: {
+    backgroundColor: BGWASH,
+    height: 350
+  },  
+  spinner: {
+    width: 20,
+    marginRight: 6
+  }
 });
-
-export default App;

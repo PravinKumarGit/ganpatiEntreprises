@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mamta/Desktop/deswal/projects/GanpatiEnterprises/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "C:\\PravinKumarProject\\ganpatiEntreprises\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/Users/mamta/.gradle/caches/transforms-2/files-2.1/28c9194402c6ffc6290a3ef9fc6dee6c/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\pravin\\.gradle\\caches\\transforms-2\\files-2.1\\083c5ea4c2a21a0f412ce44098baf073\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

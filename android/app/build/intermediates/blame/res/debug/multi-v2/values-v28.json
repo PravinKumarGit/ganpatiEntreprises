@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/mamta/Desktop/deswal/projects/GanpatiEnterprises/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v28/values-v28.xml",
+            "outputFile": "C:\\PravinKumarProject\\ganpatiEntreprises\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/mamta/.gradle/caches/transforms-2/files-2.1/28c9194402c6ffc6290a3ef9fc6dee6c/res/values-v28/values-v28.xml",
+                    "source": "C:\\Users\\pravin\\.gradle\\caches\\transforms-2\\files-2.1\\083c5ea4c2a21a0f412ce44098baf073\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
